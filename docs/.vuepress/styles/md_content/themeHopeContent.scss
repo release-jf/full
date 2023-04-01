@@ -1,0 +1,76 @@
+/*
+md内容体
+*/
+//斜体字体
+.theme-hope-content em {
+  color: rgb(216, 14, 248);
+}
+
+//加粗字体
+.theme-hope-content strong {
+  color: rgba(3, 157, 251, 0.85);
+}
+
+// 1. 标识
+.theme-hope-content ol li::marker {
+  color: rgb(33, 230, 193);
+}
+
+// - 标识
+.theme-hope-content ul li::marker {
+  color: rgb(15, 60, 237);
+}
+
+.theme-hope-content code {
+  color: #0abe54;
+  background: rgba(178, 193, 220, 0.22);
+}
+
+/*代码隐藏*/
+.theme-hope-content .hint-container.details {
+  background: #eee;
+}
+
+.theme-hope-content h1,
+.theme-hope-content h2,
+.theme-hope-content h3,
+.theme-hope-content h4,
+.theme-hope-content h5 {
+  color: #e20ea2;
+}
+
+.theme-hope-content h1 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.37rem;
+  padding-bottom: 0.3rem;
+  font-size: 24.5px;
+}
+
+.theme-hope-content h2 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.28rem;
+  padding-bottom: 0.3rem;
+  font-size: 22.5px;
+  border-color: #e20ea2;
+}
+
+.theme-hope-content h3 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.24rem;
+  padding-bottom: 0.3rem;
+  font-size: 20.5px;
+}
+
+.theme-hope-content h4 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.18rem;
+  padding-bottom: 0.3rem;
+  font-size: 18.5px;
+}
+
+.theme-hope-content h5 {
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+  padding-bottom: 0.3rem;
+  font-size: 16.5px;
+}

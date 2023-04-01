@@ -1,0 +1,53 @@
+{
+  "name": "full",
+  "version": "1.0.0-beta.0",
+  "description": "完整示例版：生成release，tags，changelog",
+  "license": "MIT",
+  "scripts": {
+    "build": "vuepress-vite build docs",
+    "dev": "vuepress-vite dev docs",
+    "dev-clean": "vuepress-vite dev docs --clean-cache",
+    "commit": "git add -A && git status && cz",
+    "prepare": "husky install",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.61",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-plugin-search-pro": "2.0.0-beta.200",
+    "vuepress-theme-hope": "2.0.0-beta.200",
+    "vuepress-vite": "2.0.0-beta.61"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "release-it": "^15.10.0"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8",
+    "pnpm": ">=8"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "webpack",
+        "vuepress",
+        "@commitlint/cli",
+        "sass-loader"
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

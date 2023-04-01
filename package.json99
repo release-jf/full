@@ -1,0 +1,51 @@
+{
+  "name": "full",
+  "private": true,
+  "version": "1.0.1-beta.10",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc && vite build",
+    "commit": "git add -A && pnpm git-cz",
+    "clean": "pnpm run --stream -r clean",
+    "prepare": "husky install",
+    "releaset": "pnpm commit-and-tag-version",
+    "release": "pnpm clean && pnpm release:bump",
+    "release:bump": "bumpp -r --execute=\"pnpm commit-and-tag-version && git add CHANGELOG.md\" --commit \"chore(release): publish v%s\" --all --tag --push",
+    "release:publish": "cross-env NODE_OPTIONS=\"--experimental-json-modules\" tsx scripts/release.ts",
+    "release:sync": "cross-env NODE_OPTIONS=\"--experimental-json-modules\" tsx scripts/sync.ts",
+    "preview": "vite preview",
+    "test": "vitest --coverage",
+    "tests": "echo demo test out!"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  },
+  "packageManager": "pnpm@8.0.0",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8",
+    "pnpm": ">=8"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.5.1",
+    "@commitlint/config-conventional": "17.4.4",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "bumpp": "9.1.0",
+    "commit-and-tag-version": "11.2.0",
+    "commitizen": "4.3.0",
+    "cross-env": "7.0.3",
+    "cz-git": "1.6.1",
+    "husky": "^8.0.3",
+    "tsx": "3.12.6",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vitest": "0.29.8",
+    "vue-tsc": "^1.2.0"
+  }
+}
