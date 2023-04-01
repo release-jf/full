@@ -3,7 +3,11 @@
     "commitMessage": "chore(release): release v${version}"
   },
   "github": {
-    "release": true
+    "web": true,
+    "release": true,
+    "autoGenerate": true,
+    "tokenRef": "RELEASE_TOKEN",
+    "releaseName": "v${version}",
   },
   "npm": {
     "publish": false
