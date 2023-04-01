@@ -7,7 +7,7 @@
     "release": true,
     "autoGenerate": true,
     "tokenRef": "RELEASE_TOKEN",
-    "releaseName": "v${version}",
+    "releaseName": "v${version}"
   },
   "npm": {
     "publish": false
