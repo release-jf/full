@@ -1,6 +1,6 @@
 {
   "name": "full",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "完整示例版：生成release，tags，changelog",
   "license": "MIT",
   "scripts": {
